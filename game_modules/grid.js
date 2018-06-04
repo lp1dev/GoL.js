@@ -1,5 +1,5 @@
 class Cell {
-    constructor(x, y, alive=false, color) {
+    constructor(x, y, alive=false, color=null) {
         this.x = x
         this.y = y
         this.alive = alive
@@ -14,8 +14,10 @@ class Grid {
         this.cells = {}
         preset.forEach((line, y) => {
             this.cells[y] = {}
-            line.forEach((cell, x) => {
-                this.cells[y][x] = new Cell(x, y, cell !== 'rgba(0,0,0,1)', cell)
+            line.forEach((pixel, x) => {
+                this.cells[y][x] = new Cell(x, y, 
+                    pixel !== 'rgba(0,0,0,1)', 
+                    pixel !== 'rgba(0,0,0,1)' ? pixel : null)
             })
         })
     }

@@ -38,9 +38,6 @@ class Game {
                     \tpreset: \n${this.preset}`)
     }
     buildPreset (seed) {
-  //      const preset = []
-  //      seed.split('\n').forEach((line) => preset.push(line))
-        //      return preset
         return seed
     }
     init () {

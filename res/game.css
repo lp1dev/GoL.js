@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    text-align: center;
 }
 #grid {
     background-color: #0B072C;
@@ -12,7 +13,24 @@ svg {
 
 .cell {
     fill: #BF96E4;
-    animation: display 3s ease linear;
+    /* animation: display 0.5s ease; */
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+}
+
+#hidden-canvas {
+    position: absolute;
+}
+
+#seeds {
+    display: flex;
+}
+
+img {
+    margin: 1vh;
 }
 
 @keyframes display {
