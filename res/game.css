@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+#grid {
+    background-color: #0B072C;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+.cell {
+    fill: #BF96E4;
+    animation: display 3s ease linear;
+}
+
+@keyframes display {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} 

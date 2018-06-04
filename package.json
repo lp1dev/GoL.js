@@ -1,0 +1,18 @@
+{
+  "name": "conwaygame-front-end",
+  "version": "1.0.0",
+  "description": "Conway Game of Life Front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremie Amsellem",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^4.4.1"
+  }
+}
