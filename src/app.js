@@ -21,7 +21,6 @@ function updateGrid(grid) {
             if (cell && cell.alive) {
                 if (!cell.color) {
                     cell.color = defaultColor
-                    console.log('defaultColor', defaultColor)                    
                 }
                 output += `<rect class="cell" x="${x}" y="${y}" width="1" height="1" style="fill: ${cell.color}; stroke: ${cell.color}"/>`
             }
@@ -67,7 +66,7 @@ function init(seed) {
             updateGrid(game.grid)
             $('#generation').innerText = 'Generation ' + generation
         }
-    }, 100)
+    }, 50)
 
 }
 
