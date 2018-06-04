@@ -23,6 +23,7 @@ svg {
 
 #hidden-canvas {
     position: absolute;
+    z-index: -1;
 }
 
 #seeds {
