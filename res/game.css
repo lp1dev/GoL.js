@@ -1,24 +1,48 @@
 body {
     margin: 0;
     text-align: center;
-}
-#grid {
-    background-color: #0B072C;
+    background-color: #424242;
+    color: #e2e2e2;
 }
 
-svg {
+a, a:hover, a:visited {
+    color: #e2e2e2;
+}
+
+button, select {
+    width: 10vh;
+    border: 0;
+    padding: 1vh 2vh;
+}
+
+select {
+    width: 18vh;
+}
+
+#grid {
+    background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.9));
+}
+
+#generation {
+    padding: 2vh;
+}
+
+#svg-grid {
     height: 100%;
     width: 100%;
 }
 
 .cell {
     fill: #BF96E4;
-    /* animation: display 0.5s ease; */
 }
 
 #header {
     display: flex;
     flex-direction: column;
+}
+#footer {
+    background-color: rgba(0,0,0,0.9);
+    padding: 2vh;
 }
 
 #hidden-canvas {
@@ -28,13 +52,18 @@ svg {
 
 #seeds {
     display: flex;
+    justify-content: space-around;
+}
+
+#controls {
+    margin: 2vh;
 }
 
 img {
     margin: 1vh;
+    border: 1px solid #e2e2e2;
 }
 
-@keyframes display {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-} 
+img:hover {
+    border: 1px solid red;
+}

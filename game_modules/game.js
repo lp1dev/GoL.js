@@ -46,19 +46,21 @@ class Game {
     }
     next () {
         const liveCells = this.grid.getLiveCells()
-        liveCells.forEach((cell) => {
-            const liveNeighbours = this.grid.getLiveNeighbours(cell)
-            const neighbours = this.grid.getNeighbours(cell)
+        liveCells.forEach((liveCell) => {
+            // const liveNeighbours = this.grid.getLiveNeighbours(liveCell)
+            const neighbours = this.grid.getNeighbours(liveCell)
+            const liveNeighbours = neighbours.filter(cell => cell.alive)
             if (liveNeighbours.length < 2) {
-                this.executionStack.push(cell, 'KILL')
+                this.executionStack.push(liveCell, 'KILL')
             } else if (liveNeighbours.length > 3) {
-                this.executionStack.push(cell, 'KILL')
+                this.executionStack.push(liveCell, 'KILL')
             }
-            neighbours.forEach((cell) => {
-                if (!cell.alive) {
-                    const liveNeighbours = this.grid.getLiveNeighbours(cell)
+            neighbours.forEach((neighbour) => {
+                if (!neighbour.alive) {
+                    const liveNeighbours = this.grid.getLiveNeighbours(neighbour)
                     if (liveNeighbours.length === 3) {
-                        this.executionStack.push(cell, 'LIVE')
+                        neighbour.color = liveCell.color
+                        this.executionStack.push(neighbour, 'LIVE')
                     }
                 }
             })

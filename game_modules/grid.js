@@ -21,15 +21,6 @@ class Grid {
             })
         })
     }
-    print () {
-        for (let y = 0; y < this.height; y++) {
-            const line = this.cells[y]
-            for (let x = 0; x < this.width; x++) {
-                process.stdout.write(line[x].alive ? '0' : ' ')
-            }
-            process.stdout.write('\n')
-        }
-    }
     getLiveCells () {
         const alive = []
         for (let lineIndex in this.cells) {

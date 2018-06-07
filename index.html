@@ -1,20 +1,40 @@
 <html>
-  <head>
-    <title>Conway Game of Life</title>
-    <meta charset="utf-8"></meta>
-    <link rel="stylesheet" type="text/css" href="./res/game.css"/>
-  </head>
-  <body>
-    <div id="header">
-      Select a seed
-      <div id="seeds">
-      </div>
-      <canvas id="hidden-canvas" height="200" width="200"></canvas>
+
+<head>
+  <title>Conway Game of Life</title>
+  <meta charset="utf-8"></meta>
+  <link rel="stylesheet" type="text/css" href="./res/game.css" />
+</head>
+
+<body>
+  <div id="header">
+    <h1>John Conway's Game of Life</h1>
+    <h3>Select a seed</h3>
+    <div id="seeds">
+    </div>
+    <canvas id="hidden-canvas" height="200" width="200"></canvas>
+    <div id="controls">
+      <h3>Controls</h3>      
       <button id="stop">Start</button>
-      <div id="generation">Generation 0</div>
+      <button onclick="next()">Next</button>
+      <select onchange="changeSpeed(this.value)">
+        <option selected disabled>Refresh Timeout</option>
+        <option>50</option>
+        <option>100</option>
+        <option>250</option>
+        <option>500</option>
+        <option>1000</option>
+        <option>2000</option>
+      </select>
     </div>
-    <div id="grid">
-    </div>
-    <script src="dist/game.js"></script>
-  </body>
+    <div id="generation">Select a seed and hit 'Start' to see it evolve</div>
+  </div>
+  <div id="grid">
+  </div>
+  <div id="footer">
+    Jérémie Amsellem - <a href="https://lp1.eu">Lp1.eu</a>
+  </div>
+  <script src="dist/game.js"></script>
+</body>
+
 </html>
