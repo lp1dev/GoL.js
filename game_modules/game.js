@@ -59,7 +59,7 @@ class Game {
                 if (!neighbour.alive) {
                     const liveNeighbours = this.grid.getLiveNeighbours(neighbour)
                     if (liveNeighbours.length === 3) {
-                        neighbour.color = liveCell.color
+                        neighbour.color_array = liveCell.color_array
                         this.executionStack.push(neighbour, 'LIVE')
                     }
                 }

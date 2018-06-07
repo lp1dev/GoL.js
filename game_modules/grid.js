@@ -1,9 +1,10 @@
 class Cell {
-    constructor(x, y, alive=false, color=null) {
+    constructor(x, y, alive=false, rgba=null, color_array=null) {
         this.x = x
         this.y = y
         this.alive = alive
-        this.color = color
+        this.rgba = rgba
+        this.color_array = color_array
     }
 }
 
@@ -16,8 +17,9 @@ class Grid {
             this.cells[y] = {}
             line.forEach((pixel, x) => {
                 this.cells[y][x] = new Cell(x, y, 
-                    pixel !== 'rgba(0,0,0,1)', 
-                    pixel !== 'rgba(0,0,0,1)' ? pixel : null)
+                    pixel.rgba !== 'rgba(0,0,0,1)', 
+                    pixel.rgba !== 'rgba(0,0,0,1)' ? pixel.rgba : null,
+                    pixel.array)
             })
         })
     }
