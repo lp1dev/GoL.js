@@ -1,4 +1,5 @@
 import Game from '../game_modules/game'
+import axios from 'axios'
 
 let height = 0
 let width = 0
